@@ -43,3 +43,28 @@ puts 'Hello, world!'
 
 - Run a Ruby program from a file
   `$ ruby <filename>`
+
+  ---
+
+  ### Day 2 Self Study
+  **Find**
+  - Find out how to access files with and without code blocks. What is the benefit of the code block?
+    ```ruby
+    # with block
+    File.open('path/to/file', 'r').each { |line| puts line }
+
+    # without block
+    file = File.open('path/to/file', 'r')
+    while (line = file.readline)
+      puts line
+    end
+    file.close
+    ```
+  - How would you translate a hash to an array? Can you translate arrays to hashes?
+    ```ruby
+    arrayFromHash
+    myHash.each{|key, value| arrayFromHash.push([key, value])}
+    hashFromArray = Hash[*myArray]
+    ```
+  - How would you iterate through a hash?
+    `hash.each{|k, v| doThings()}`
